@@ -129,3 +129,4 @@ Este projeto faz parte do meu aprendizado em desenvolvimento backend na Rocketse
 - `NODE_ENV=test` -> Define o ambiente de teste. (Não precisa ser informado no .env quando estamos usando o vitest ou jest)
 - `DATABASE_URL=./db/test.db` -> Define a url do banco de dados de teste.
 - `execSync` -> Executa um comando no terminal.
+- `z.coerce.number()` -> Converte o valor para um numero.
