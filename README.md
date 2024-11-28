@@ -113,9 +113,19 @@ Este projeto faz parte do meu aprendizado em desenvolvimento backend na Rocketse
 - `Integração` -> Dependem um pouco mais de tecnologia ou arquitetura. (mais testes integração)
 - `Unitários` -> Mais isolados, menos acoplados. (muitos testes unitarios)
 
+- `Testes se isolam de qualquer contexto, testes jamais devem depender de outros testes. Se um depender do outro, talvez eles deveriam ser um só.`
+
 ### Vitest
-- É um framework de teste para node.js, que facilita a escrita de testes e garante agilidade e ecalabilidade.
+- É um framework de teste para node.js, que facilita a escrita de testes e garante agilidade e ecalabilidade. 
 - `describe` -> Define um grupo de testes.
 - `it` -> Define um teste.
 - `beforeAll` -> Executa uma função antes de todos os testes.
 - `afterAll` -> Executa uma função depois de todos os testes.
+- `it.todo` -> Define um teste que ainda não foi implementado.
+
+### Ambiente de teste
+- Ao usar o vitest, o node_env ja vem configurado como teste, então não é necessario informar no .env. Com isso informamos apenas a url do banco de dados de teste.
+- Geralmente o teste precisa se adaptar ao código e não o contrario.
+- `NODE_ENV=test` -> Define o ambiente de teste. (Não precisa ser informado no .env quando estamos usando o vitest ou jest)
+- `DATABASE_URL=./db/test.db` -> Define a url do banco de dados de teste.
+- `execSync` -> Executa um comando no terminal.
